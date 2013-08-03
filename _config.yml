@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://blog.brentgreeff.com/
+title: blog.BrentGreeff.com
+subtitle: "Code, Travel, Music"
+author: Brent Greeff
 simple_search: http://google.com/search
-description:
+description: "The official blog of Brent Greeff - Programmer, PM, DJ, Gypsey"
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
