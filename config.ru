@@ -6,7 +6,7 @@ require 'rack-rewrite'
 $root = ::File.dirname(__FILE__)
 
 use Rack::Rewrite do
-  r301 %r{.*}, 'http://blog-brentgreeff.herokuapp.com$&', if: Proc.new {|rack_env|
+  r301 %r{.*}, 'http://blog.brentgreeff.com$&', if: Proc.new {|rack_env|
     rack_env['SERVER_NAME'] != 'blog.brentgreeff.com'
   }
 end
