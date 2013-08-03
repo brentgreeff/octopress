@@ -1,8 +1,15 @@
 require 'bundler/setup'
 require 'sinatra/base'
+require 'rack-rewrite'
 
 # The project root directory
 $root = ::File.dirname(__FILE__)
+
+use Rack::Rewrite do
+  r301 %r{.*}, 'http://blog-brentgreeff.herokuapp.com$&', if: Proc.new {|rack_env|
+    rack_env['SERVER_NAME'] != 'blog.brentgreeff.com'
+  }
+end
 
 class SinatraStaticServer < Sinatra::Base
 
