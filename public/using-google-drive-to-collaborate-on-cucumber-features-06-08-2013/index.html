@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>using google drive to collaborate on cucumber features - blog.BrentGreeff.com</title>
+  <meta name="author" content="Brent Greeff">
+
+  
+  <meta name="description" content="I have been working as a scrum master with remote teams for 2.5 years and during that time I have deviated a bit from textbook Scrum process. If your &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.brentgreeff.com//using-google-drive-to-collaborate-on-cucumber-features-06-08-2013">
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="blog.BrentGreeff.com" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">blog.BrentGreeff.com</a></h1>
+  
+    <h2>Code, Travel, Music</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.brentgreeff.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Using Google Drive to Collaborate on Cucumber Features</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-06T03:35:00+01:00" pubdate data-updated="true">Aug 6<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I have been working as a scrum master with remote teams for 2.5 years and during that time I have deviated a bit from textbook Scrum process. If your working with remote teams, especially if you have members of your team who speak different languages you should be familiar with the cost of miscommunication.</p>
+
+<!-- more -->
+
+
+<h2>Cucumber</h2>
+
+<p>There are a few alternatives when it comes to integration testing your app including the built in Rails integrations tests. I prefer being able to write my integration tests in plain English before writing any code. When I first started with Rails, I was also reading a lot of marketing material around personae and user journeys. The core idea is to decide who your ideal customers are and what they want to achieve. Asking these questions around <strong>how</strong> and <strong>why</strong> results in much better web apps.</p>
+
+<p>I find that asking <strong>why</strong> is a core part of writing cucumber features, in a lot of situations, feature requests (tasks) are handed down to programmers who don&rsquo;t delve deeply enough into why a feature is needed. This is often based on project managers or clients requesting things without themselves asking why its needed. Its also natural to make assumptions so I find writing a cucumber outline really helps me to think things through. On many occasions questions are revealed that lead to better ideas and simpler implementations.</p>
+
+<h2>Don&rsquo;t do planning meetings</h2>
+
+<p>My experience working with remote teams is that the traditional planning meeting once per iteration has limited value. If you have multiple remote locations and language barriers, having everyone in a campfire room or Skype chat, can be very painful. I also find thats its very easy for people to forget the points discussed.</p>
+
+<h2>Estimate based on complexity</h2>
+
+<p>Instead of planning meetings we do ad hoc estimation meetings. In these meetings we ignore implementation details or discussions about which gem to use, we simply focus on how complex the tasks sound. Normally we spend about 10-15 minutes on estimation per week.</p>
+
+<h2>Plan with cucumber</h2>
+
+<p>Normally a developer will pick up a task and in an ideal world, they would write a cucumber outline before starting to code. At this point they should then proceed with the WHY cycle and try and determine if the task can be de-scoped.</p>
+
+<p>We have taken this in a slightly different direction by turning cucumber outline writing into our planning meetings. We are using Google Drive which is pretty awesome. We are doing plan per feature rather than one big plan it all type meeting.</p>
+
+<ul>
+<li><p>Collaborative editing &ndash; The team can all see the outline taking shape in real time. Readability and clarity of purpose is a real benefit to this.</p></li>
+<li><p>Inline chat &ndash; Being able to chat inside a google doc (in the margins) is really pretty cool.</p></li>
+<li><p>Native apps &ndash; the app for the iPhone and iPad work amazingly well. On a few occasions I have been shopping and at the same time writing an outline. Its really enjoyable to use.</p></li>
+</ul>
+
+
+<p>We normally start each document with a Q+A session, sometimes these are copied from campfire or Skype discussions. In short the google doc becomes a dumping ground for any ideas, edge cases, whatever. We include our QA in the process so they know what is integration tested and they know what to expect from the feature when they test it manually.</p>
+
+<p>I normally spend a lot of time discussing ideas with the client, I can dump these conversations in the doc for developer reference.</p>
+
+<h2>Does it work</h2>
+
+<p>It&rsquo;s working very well for us. Rework is massively reduced, our cucumber outlines are very readable meaning new developers have a much better source of documentation to reference. We are more Agile, complex features are identified before we start to code.</p>
+
+<p>Planning is focused, we just write cucumber outlines for the tasks planned in the next iteration, although we spend a few hours a week on cucumber outlines, when a developer starts a feature, they can just copy paste the scenarios and start implementing the steps.</p>
+
+<p>Because the user journey is designed outside of the developer flow, managers, BA&rsquo;s and clients can talk about UX in an open ended way. Developers don&rsquo;t start a task in PT unless it has an approved cucumber outline.</p>
+
+<h2>Pivotal Tracker</h2>
+
+<p>I have been a PT devotee for quite a few years now, its light weight and has just enough features to keep me happy. Although its got commenting its not got the formatting and scope of a google document. Its great for light chat, but if the feature is complex and you want pages and pages of text, its not that easy to read. PT is designed to be light weight and I would not change that.</p>
+
+<h2>Linking PT to Google Drive</h2>
+
+<p>This is pretty easy to do, both Google Drive and PT have good search, so all thats required is to put the PT task number into the google doc file name, it&rsquo;s also easy to put a link to the google doc inside PT.</p>
+
+<p><img src="/images/posts/google_doc.png" alt="Google doc with PT task number" /></p>
+
+<h2>The future</h2>
+
+<p>We have allocated a lot of Slack time to making this process easier. You might be familiar with some of the PT / Git workflow gems available. Some of these allow you to control PT from the command line and allow git commits to be linked to PT tasks. We have some ideas on this front to integrate Google Drive with PT. The idea is that when you start a PT task from the command line it will automatically download the cucumber outline from google drive and insert it into a file.</p>
+
+<h2>Google Drive is stateless</h2>
+
+<p>One pain with Google Drive is that documents are stateless, unlike PT where a task goes through a flow until its marked <strong>accepted</strong> we need a new solution to organise our docs. Currently we are using folders to solve this. This is what ours looks like:</p>
+
+<p><img src="/images/posts/google_drive_folders.png" title="Story state using folders" alt="My google drive" /></p>
+
+<p>Since both PT and google drive have APIs we might be able to synchronise activity between PT and Drive more with a bit of dev effort.</p>
+
+<h2>Business analysts</h2>
+
+<p>If you work with a BA or there is a real interest from the business in the user journey then Google Drive might be something to investigate.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Brent Greeff</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-06T03:35:00+01:00" pubdate data-updated="true">Aug 6<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/cucumber/'>Cucumber</a>, <a class='category' href='/blog/categories/scrum/'>Scrum</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.brentgreeff.com//using-google-drive-to-collaborate-on-cucumber-features-06-08-2013/" data-via="" data-counturl="http://blog.brentgreeff.com//using-google-drive-to-collaborate-on-cucumber-features-06-08-2013/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/my-first-octopressing-03-08-2013/" title="Previous Post: My First OctoPressing">&laquo; My First OctoPressing</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/using-google-drive-to-collaborate-on-cucumber-features-06-08-2013/">Using Google Drive to Collaborate on Cucumber Features</a>
+      </li>
+    
+      <li class="post">
+        <a href="/my-first-octopressing-03-08-2013/">My First OctoPressing</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Brent Greeff -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'blogbrentgreeff';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.brentgreeff.com//using-google-drive-to-collaborate-on-cucumber-features-06-08-2013/';
+        var disqus_url = 'http://blog.brentgreeff.com//using-google-drive-to-collaborate-on-cucumber-features-06-08-2013/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

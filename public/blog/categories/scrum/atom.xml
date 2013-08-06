@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[blog.BrentGreeff.com]]></title>
-  <link href="http://blog.brentgreeff.com//atom.xml" rel="self"/>
+  <title><![CDATA[Category: Scrum | blog.BrentGreeff.com]]></title>
+  <link href="http://blog.brentgreeff.com//blog/categories/scrum/atom.xml" rel="self"/>
   <link href="http://blog.brentgreeff.com//"/>
   <updated>2013-08-06T09:59:57+01:00</updated>
   <id>http://blog.brentgreeff.com//</id>
@@ -70,7 +70,7 @@
 
 <p>This is pretty easy to do, both Google Drive and PT have good search, so all thats required is to put the PT task number into the google doc file name, it&rsquo;s also easy to put a link to the google doc inside PT.</p>
 
-<p><img src="http://blog.brentgreeff.com//images/posts/google_doc.png" alt="Google doc with PT task number" /></p>
+<p><img src="/images/posts/google_doc.png" alt="Google doc with PT task number" /></p>
 
 <h2>The future</h2>
 
@@ -80,67 +80,13 @@
 
 <p>One pain with Google Drive is that documents are stateless, unlike PT where a task goes through a flow until its marked <strong>accepted</strong> we need a new solution to organise our docs. Currently we are using folders to solve this. This is what ours looks like:</p>
 
-<p><img src="http://blog.brentgreeff.com//images/posts/google_drive_folders.png" title="Story state using folders" alt="My google drive" /></p>
+<p><img src="/images/posts/google_drive_folders.png" title="Story state using folders" alt="My google drive" /></p>
 
 <p>Since both PT and google drive have APIs we might be able to synchronise activity between PT and Drive more with a bit of dev effort.</p>
 
 <h2>Business analysts</h2>
 
 <p>If you work with a BA or there is a real interest from the business in the user journey then Google Drive might be something to investigate.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My First OctoPressing]]></title>
-    <link href="http://blog.brentgreeff.com//my-first-octopressing-03-08-2013/"/>
-    <updated>2013-08-03T11:33:00+01:00</updated>
-    <id>http://blog.brentgreeff.com//my-first-octopressing</id>
-    <content type="html"><![CDATA[<p>I have to dedicate my first post to the tool thats making it possible &ndash; <strong>Octopress</strong>. When I created my previous blog as a Rails app I decided to combine a mixture of static and dynamic content. The page was a real haml page, allowing me the convenience of simply typing what I was talking about without having to worry about how it would be interpreted.</p>
-
-<!-- more -->
-
-
-<p>I stored the page title, meta content and a few other details in the database. This information was dynamically inserted into each page through a shared layout. When I first heard of Octopress and the idea of a completely static website I knew I had to give it a try.</p>
-
-<p>I worked on an app previously where the user had a wysiwyg editor to enter posts. Combined with a versioning gem to allow for preview and undo. There was special delimiters for source code, the more flexibility I wanted the more code I had to write.</p>
-
-<p>I knew there must have to be a better way to blog.</p>
-
-<h2>It just works</h2>
-
-<p>The documentation is great and everything just works as expected. I am using the latest rvm so I switched to <code>.ruby-gemset</code> and <code>.ruby-version</code>, I got a warning when changing into the directory.</p>
-
-<p>I deployed to Heroku since its more familiar to me.</p>
-
-<h2>SEO</h2>
-
-<p>I didn&rsquo;t have any content so I might have been jumping the gun a bit but I registered my custom domain with Google Webmaster Tools and Bing. I also didn&rsquo;t want any issues with duplicate content. I think Heroku&rsquo;s default of letting u serve your site off 2 domains is not a good one. Turns out rack-rewrite was what I needed:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">use</span> <span class="ss">Rack</span><span class="p">:</span><span class="ss">:Rewrite</span> <span class="k">do</span>
-</span><span class='line'>  <span class="n">r301</span> <span class="sr">%r{.*}</span><span class="p">,</span> <span class="s1">&#39;http://blog.brentgreeff.com$&amp;&#39;</span><span class="p">,</span> <span class="k">if</span><span class="p">:</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span><span class="o">|</span><span class="n">rack_env</span><span class="o">|</span>
-</span><span class='line'>    <span class="n">rack_env</span><span class="o">[</span><span class="s1">&#39;SERVER_NAME&#39;</span><span class="o">]</span> <span class="o">!=</span> <span class="s1">&#39;blog.brentgreeff.com&#39;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>this didn&rsquo;t work too well when using : rake preview, to view the site locally, so I changed this to :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">r301</span> <span class="sr">%r{.*}</span><span class="p">,</span> <span class="s1">&#39;http://blog.brentgreeff.com$&amp;&#39;</span><span class="p">,</span> <span class="k">if</span><span class="p">:</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span><span class="o">|</span><span class="n">rack_env</span><span class="o">|</span>
-</span><span class='line'>  <span class="n">rack_env</span><span class="o">[</span><span class="s1">&#39;SERVER_NAME&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="s1">&#39;blog-brentgreeff.herokuapp.com&#39;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I didn&rsquo;t like the blog url structure, so I took some ideas from: <a href="http://www.ewal.net/2012/09/08/octopress-customizations/">this post</a></p>
 ]]></content>
   </entry>
   
