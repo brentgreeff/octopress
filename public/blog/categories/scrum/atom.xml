@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Scrum | blog.BrentGreeff.com]]></title>
   <link href="http://blog.brentgreeff.com//blog/categories/scrum/atom.xml" rel="self"/>
   <link href="http://blog.brentgreeff.com//"/>
-  <updated>2013-08-06T09:59:57+01:00</updated>
+  <updated>2013-08-06T10:18:22+01:00</updated>
   <id>http://blog.brentgreeff.com//</id>
   <author>
     <name><![CDATA[Brent Greeff]]></name>
@@ -71,6 +71,12 @@
 <p>This is pretty easy to do, both Google Drive and PT have good search, so all thats required is to put the PT task number into the google doc file name, it&rsquo;s also easy to put a link to the google doc inside PT.</p>
 
 <p><img src="/images/posts/google_doc.png" alt="Google doc with PT task number" /></p>
+
+<p>That filename reveals a convention we use for naming features in PT.</p>
+
+<p><em>usba2 = User should be able to</em></p>
+
+<p>We try and focus as much as possible on naming features in terms of user objectives. This leads to a lot of developer freedom.</p>
 
 <h2>The future</h2>
 

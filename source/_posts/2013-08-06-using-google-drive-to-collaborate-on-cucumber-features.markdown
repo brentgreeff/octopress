@@ -67,6 +67,11 @@ This is pretty easy to do, both Google Drive and PT have good search, so all tha
 
 [google_doc]: /images/posts/google_doc.png
 
+That filename reveals a convention we use for naming features in PT.
+
+_usba2 = User should be able to_
+
+We try and focus as much as possible on naming features in terms of user objectives. This leads to a lot of developer freedom.
 
 The future
 ----------
